@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image gallery</title>
+
+    <style>
+      /* Общие стили страницы */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+      }
+
+      /* Стили заголовка */
+      h1 {
+        background-color: #3e7130;
+        color: white;
+        font-size: 28px;
+        margin: 0;
+        padding: 6px 8px;
+      }
+
+      /* Стили галереи */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 92px);
+        gap: 6px;
+        padding: 8px;
+      }
+
+      /* Стили изображений */
+      .gallery img {
+        width: 92px;
+        height: 93px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      /* Стили ссылки */
+      .new-images {
+        display: inline-block;
+        color: #c45b50;
+        margin: 14px 6px 20px;
+      }
+
+      /* Цвет ссылки при наведении мышкой */
+      .new-images:hover {
+        color: green;
+      }
+
+      /* Стили подписи автора */
+      .author {
+        background-color: black;
+        color: white;
+        padding: 8px 6px;
+        margin: 0;
+        font-family: Georgia, serif;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+      <img src="https://picsum.photos/240/220?random=1" alt="Image 1" />
+
+      <img src="https://picsum.photos/240/220?random=2" alt="Image 2" />
+
+      <img src="https://picsum.photos/240/220?random=3" alt="Image 3" />
+
+      <img src="https://picsum.photos/240/220?random=4" alt="Image 4" />
+    </div>
+
+    <a
+      class="new-images"
+      href="#"
+      onclick="window.location.reload(); return false;"
+    >
+      New images
+    </a>
+
+    <p class="author">Random image app by <b>Michael</b></p>
+  </body>
+</html>
